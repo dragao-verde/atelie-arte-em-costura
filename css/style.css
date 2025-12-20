@@ -101,6 +101,13 @@ nav ul li a:hover {
     font-size: 18px;
 }
 
+.container-inicio h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    text-decoration: dashed;
+}
+
 .container-apresentacao {
     text-align: center;
 }
@@ -117,6 +124,75 @@ footer {
     color: #333;
     margin-top: 50px;
 }
+
+.container-contato {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 22px;
+    background-color: var(--sobre-bg);
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    text-align: center;
+}
+
+.container-contato h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 3px;
+}
+
+.container-contato p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 16px;
+}
+
+.container-contato .links-contato {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container-contato a {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    background: linear-gradient(90deg, var(--gradient-mid), var(--gradient-end));
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.container-contato a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 26px rgba(0,0,0,0.12);
+    opacity: 0.98;
+}
+
+@media (max-width: 600px) {
+    .container-contato { padding: 16px; margin: 24px 12px; }
+    .container-contato h2 { font-size: 24px; }
+    .container-contato a { width: 100%; max-width: 360px; }
+}
+
+.bt-voltar {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    background: linear-gradient(90deg, var(--gradient-mid), var(--gradient-end));
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.bt-voltar:hover { transform: translateY(-3px); box-shadow: 0 12px 26px rgba(0,0,0,0.12); opacity: 0.98; }
 
 .container-sobre {
     max-width: 800px;
@@ -153,9 +229,9 @@ footer {
     background-color: var(--card-bg);
     border-radius: var(--card-radius);
     box-shadow: var(--card-shadow);
-    padding: 20px;
+    padding: 22px;
     text-align: center;
-    width: 300px;
+    width: 340px;
     border: 1px solid rgba(0,0,0,0.04);
 }
 
@@ -177,26 +253,29 @@ footer {
     flex-basis: 100%;
     text-align: center;
     margin-bottom: 10px;
+    color: var(--text-color);
+    text-decoration: underline;
 }
 
 .container-produtos .card {
     background-color: var(--card-bg);
     border-radius: var(--card-radius);
     box-shadow: var(--card-shadow);
-    padding: 16px;
+    padding: 18px;
     text-align: center;
-    width: 300px;
+    width: 340px;
     border: 1px solid rgba(0,0,0,0.04);
-    height: 380px;
+    height: 420px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .container-produtos .card .media-card1,
-.container-produtos .card .media-card2 {
+.container-produtos .card .media-card2,
+.container-produtos .card .media-card3 {
     width: 100%;
-    height: 180px;
+    height: 220px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -214,7 +293,7 @@ a:hover {
     color: #de3163;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .container-produtos .card { width: 90%; }
     nav .logo { font-size: 18px; }
     nav ul li a { font-size: 14px; padding: 6px 8px; }
@@ -227,3 +306,4 @@ footer {
     margin-top: 40px;
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
 }
+
