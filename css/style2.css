@@ -53,15 +53,28 @@ body {
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
 }
 
+@media (max-width: 1024px) {
+    .catalogo { grid-template-columns: repeat(3, 1fr); }
+    .item { height: 280px; }
+}
+
 @media (max-width: 768px) {
-    .catalogo { grid-template-columns: repeat(2, 1fr); }
-    .item { height: 768px; }
+    .catalogo { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .item { height: 250px; padding: 6px; }
+    header h1 { font-size: 24px; }
+    header p { font-size: 14px; }
 }
 
 @media (max-width: 600px) {
-    .catalogo { grid-template-columns: 1fr; }
-    .item { height: auto; }
-    .item img { height: auto; object-fit: contain; }
+    .catalogo { grid-template-columns: 1fr; gap: 16px; padding: 16px; }
+    .item { height: auto; max-height: 300px; }
+    .item img { height: auto; object-fit: contain; max-height: 280px; }
+    header { height: auto; padding: 12px 0; }
+    header h1 { font-size: 20px; margin: 8px 0 4px; }
+    header p { font-size: 13px; padding: 0 10px; }
+    .bt-voltar { font-size: 13px; padding: 8px 12px; width: 100%; max-width: 320px; }
+    footer { padding: 16px; }
+    footer p { font-size: 12px; }
 }
 
 header {

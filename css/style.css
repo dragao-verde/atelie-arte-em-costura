@@ -113,7 +113,8 @@ nav ul li a:hover {
 }
 
 #logo-atelie {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: auto;
     margin-top: 20px;
 }
@@ -293,10 +294,47 @@ a:hover {
     color: #de3163;
 }
 
+@media (max-width: 900px) {
+    .container-produtos { gap: 16px; }
+    .container-produtos .card { width: 95%; max-width: 320px; }
+    nav ul { gap: 8px; }
+}
+
 @media (max-width: 768px) {
-    .container-produtos .card { width: 90%; }
-    nav .logo { font-size: 18px; }
-    nav ul li a { font-size: 14px; padding: 6px 8px; }
+    header { height: auto; }
+    header .container { padding: 10px; flex-direction: column; }
+    nav { flex-direction: column; align-items: center; width: 100%; }
+    nav .logo h1 { font-size: 18px; }
+    nav ul { gap: 6px; justify-content: center; }
+    nav ul li a { font-size: 13px; padding: 5px 10px; }
+    main { padding-top: 100px; }
+    .container-inicio h2 { font-size: 28px; }
+    .container-inicio p { font-size: 16px; }
+    #logo-atelie { max-width: 200px; }
+    .container-sobre { padding: 16px; margin: 30px 12px; }
+    .container-sobre p { text-align: left; font-size: 16px; }
+    .container-contato { padding: 14px; margin: 24px 12px; }
+    .container-contato h2 { font-size: 22px; }
+    .container-contato p { font-size: 16px; }
+    .container-contato a { font-size: 14px; }
+    .container-produtos .card { width: 95%; max-width: 280px; height: auto; }
+    .container-produtos .card .media-card1,
+    .container-produtos .card .media-card2,
+    .container-produtos .card .media-card3 { height: 160px; }
+}
+
+@media (max-width: 480px) {
+    nav .logo h1 { font-size: 16px; }
+    nav ul { gap: 4px; }
+    nav ul li a { font-size: 11px; padding: 4px 8px; }
+    .container-inicio h2 { font-size: 22px; }
+    .container-inicio p { font-size: 14px; }
+    .container-sobre h2 { font-size: 20px; }
+    .container-sobre p { font-size: 14px; }
+    .container-contato h2 { font-size: 20px; }
+    .container-contato p { font-size: 14px; }
+    .container-contato a { width: 100%; max-width: 280px; }
+    .bt-voltar { width: 100%; max-width: 280px; }
 }
 
 footer {
